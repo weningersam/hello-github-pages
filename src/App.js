@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import HelloCubeWrapper from './components/HelloCubeWrapper.js';
+
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <HelloCubeWrapper/><HelloCubeWrapper/>
+        </div>
+        <p>Hello new friends<br/>-Sam W</p>
       </header>
     </div>
   );
