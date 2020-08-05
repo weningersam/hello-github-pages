@@ -1,30 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
-import HelloCubeWrapper from './components/HelloCubeWrapper.js';
+import MainPage from './pages/mainPage.js';
+import PortfolioPage from './pages/portfolioPage.js';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div>
-          <HelloCubeWrapper/><HelloCubeWrapper/>
-        </div>
-        <p>Hello new friends<br/>-Sam W</p>
-      </header>
+    <div>
+      {/*Routing logic*/}
+      <BrowserRouter basename="hello-github-pages">
+        <Switch>
+          <Route path="/" exact render={(props) => <MainPage {...props}/>}/>
+          <Route path="/example/:id" render={(props) => <PortfolioPage {...props}/>}/>
+        </Switch>
+      </BrowserRouter>
+      
     </div>
   );
 }

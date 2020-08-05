@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import { Link} from 'react-router-dom';
 import helloCube from '../threeSrc/hello-cube';
+import {Link} from 'react-router-dom';
 
-export default class HelloCubeWrapper extends Component {
+
+export default class HelloCubeWrapper2 extends Component {
     componentDidMount(){
         helloCube(this.scene);
+        helloCube(this.scene);
     }
-
-    
 
     render(){
         return(
             <div>
                 <div ref={element => this.scene = element} />
-                <p>hi this is cube wrapper 1</p>
-                <Link to="/2"><button>This is 1</button></Link>
+                <Link to="/"><button>This is 2</button></Link>
             </div>
         );
     }
