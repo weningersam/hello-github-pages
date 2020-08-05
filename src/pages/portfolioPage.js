@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import HelloCubeWrapper from '../components/HelloCubeWrapper.js';
+import HelloCubeWrapper2 from '../components/HelloCubeWrapper2.js';
 
 export default class PortfolioPage extends Component{
 
@@ -13,11 +15,11 @@ export default class PortfolioPage extends Component{
     render(){
         return (
             <div>
-                <h1>This is the portfolio page</h1>
+                <h1>This is project {this.state.id}</h1>
 
-                <p>{'Project is number: ' + this.state.id}</p>
-
-                <Link to="/" target="_blank">Link to main page</Link>
+                {this.state.id === '0' && <HelloCubeWrapper/>}
+                {this.state.id === '1' && <HelloCubeWrapper2/>}
+                
             </div>
         );
     }

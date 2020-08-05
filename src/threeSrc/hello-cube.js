@@ -29,7 +29,7 @@ export default function(sceneReference) {
         scene.add( mesh );
 
         renderer = new THREE.WebGLRenderer( { antialias: true } );
-        renderer.setSize( window.innerWidth/5, window.innerHeight/5 );
+        renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
 
         sceneReference.appendChild(renderer.domElement);
         

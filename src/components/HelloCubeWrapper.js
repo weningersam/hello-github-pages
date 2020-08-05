@@ -13,8 +13,6 @@ export default class HelloCubeWrapper extends Component {
         return(
             <div>
                 <div ref={element => this.scene = element} />
-                <p>hi this is cube wrapper 1</p>
-                <Link to="/2"><button>This is 1</button></Link>
             </div>
         );
     }
