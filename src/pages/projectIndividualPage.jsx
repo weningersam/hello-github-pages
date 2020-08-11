@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import HelloCubeWrapper from '../components/HelloCubeWrapper.js';
 import HelloCubeWrapper2 from '../components/HelloCubeWrapper2.js';
 
-export default class PortfolioPage extends Component{
+export default class ProjectIndividualPage extends Component{
 
     constructor(props){
         super(props);
